@@ -35,3 +35,6 @@ let mySprite = sprites.create(img`
     . . . . f f f f f f f . . . . . 
     . . . . f f f . . . . . . . . . 
     `, SpriteKind.Player)
+controller.moveSprite(mySprite)
+tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 1))
+scene.cameraFollowSprite(mySprite)
