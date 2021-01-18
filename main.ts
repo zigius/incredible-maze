@@ -1,5 +1,5 @@
 function setCakes () {
-    cake = sprites.create(img`
+    cake_0 = sprites.create(img`
         . . . . . . . . . . b b b . . . 
         . . . . . . . . b e e 3 3 b . . 
         . . . . . . b b e 3 2 e 3 a . . 
@@ -17,14 +17,33 @@ function setCakes () {
         . . . . . . b b b b 3 d d d b a 
         . . . . . . . . . . b b b a a . 
         `, SpriteKind.Food)
-    tiles.placeOnTile(cake, tiles.getTileLocation(1, 10))
-    tiles.placeOnTile(cake, tiles.getTileLocation(1, 11))
+    tiles.placeOnTile(cake_0, tiles.getTileLocation(1, 10))
+    cake_1 = sprites.create(img`
+        . . . . . . . . . . b b b . . . 
+        . . . . . . . . b e e 3 3 b . . 
+        . . . . . . b b e 3 2 e 3 a . . 
+        . . . . b b 3 3 e 2 2 e 3 3 a . 
+        . . b b 3 3 3 3 3 e e 3 3 3 a . 
+        b b 3 3 3 3 3 3 3 3 3 3 3 3 3 a 
+        b 3 3 3 d d d d 3 3 3 3 3 d d a 
+        b b b b b b b 3 d d d d d d 3 a 
+        b d 5 5 5 5 d b b b a a a a a a 
+        b 3 d d 5 5 5 5 5 5 5 d d d d a 
+        b 3 3 3 3 3 3 d 5 5 5 d d d d a 
+        b 3 d 5 5 5 3 3 3 3 3 3 b b b a 
+        b b b 3 d 5 5 5 5 5 5 5 d d b a 
+        . . . b b b 3 d 5 5 5 5 d d 3 a 
+        . . . . . . b b b b 3 d d d b a 
+        . . . . . . . . . . b b b a a . 
+        `, SpriteKind.Food)
+    tiles.placeOnTile(cake_1, tiles.getTileLocation(1, 11))
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    cake.destroy()
+    cake_0.destroy()
     music.baDing.play()
 })
-let cake: Sprite = null
+let cake_1: Sprite = null
+let cake_0: Sprite = null
 tiles.setTilemap(tiles.createTilemap(hex`1800180003070707070707070707070707070707070707070707070209010a01010101010101010101010101010101010101010609010a0101010a0a0a0a0101010a010a010a0101010a010609010a0101010a01010a0101010a010a010a0101010a010609010a0101010a01010a0101010a010a010a0101010a010609010a0a0a0a0a0a0a0a010a0a0a0a0a010a010a0a0a010609010101010101010101010101010101010101010101010609010a0a0a0a0a0a010a0a0a0a0a0a0a0a0a0a0a0a0a0a06090101010101010a010a0101010101010101010101010106090101010101010a010a010101010101010101010101010609010a0a0a0a0a0a010a010a0a0a0a0a0a0a0a0a0a0a010609010a0101010101010a010a0101010101010101010a010609010a010a0a0a0a0a0a010a010a0a0a0a0101010101010609010a01010101010101010a010a01010a0a0a0a0a0a010609010a01010101010101010a010a0101010101010101010609010a0a0a0a0a0a0a0a0a0a010a0101010101010101010609010a010101010101010101010a0a0a0a0a0a0a0a0a010609010a0101010101010101010101010101010101010a01060901010a010a0a0a0a0a010a010a010a0a0a01010a010a060901010a010a0101010a010a010a010a0101010a010a010609010a01010a0101010a0101010a010a01010a010a010a0609010101010a0101010a0101010a010a0101010a010a01060901010a0a0a0101010a0101010a010a0a0a01010a010106040808080808080808080808080808080808080808080805`, img`
     222222222222222222222222
     2.2....................2
