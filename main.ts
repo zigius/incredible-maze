@@ -37,42 +37,58 @@ function setCakes () {
         . . . . . . . . . . b b b a a . 
         `, SpriteKind.Food)
     tiles.placeOnTile(cake_1, tiles.getTileLocation(1, 11))
+    cake_2 = sprites.create(img`
+        . . . . . . . . . . b b b . . . 
+        . . . . . . . . b e e 3 3 b . . 
+        . . . . . . b b e 3 2 e 3 a . . 
+        . . . . b b 3 3 e 2 2 e 3 3 a . 
+        . . b b 3 3 3 3 3 e e 3 3 3 a . 
+        b b 3 3 3 3 3 3 3 3 3 3 3 3 3 a 
+        b 3 3 3 d d d d 3 3 3 3 3 d d a 
+        b b b b b b b 3 d d d d d d 3 a 
+        b d 5 5 5 5 d b b b a a a a a a 
+        b 3 d d 5 5 5 5 5 5 5 d d d d a 
+        b 3 3 3 3 3 3 d 5 5 5 d d d d a 
+        b 3 d 5 5 5 3 3 3 3 3 3 b b b a 
+        b b b 3 d 5 5 5 5 5 5 5 d d b a 
+        . . . b b b 3 d 5 5 5 5 d d 3 a 
+        . . . . . . b b b b 3 d d d b a 
+        . . . . . . . . . . b b b a a . 
+        `, SpriteKind.Food)
+    tiles.placeOnTile(cake_2, tiles.getTileLocation(1, 12))
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+	
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    cake_0.destroy()
+    otherSprite.destroy()
     music.baDing.play()
 })
+let cake_2: Sprite = null
 let cake_1: Sprite = null
 let cake_0: Sprite = null
-tiles.setTilemap(tiles.createTilemap(hex`1800180003070707070707070707070707070707070707070707070209010a01010101010101010101010101010101010101010609010a0101010a0a0a0a0101010a010a010a0101010a010609010a0101010a01010a0101010a010a010a0101010a010609010a0101010a01010a0101010a010a010a0101010a010609010a0a0a0a0a0a0a0a010a0a0a0a0a010a010a0a0a010609010101010101010101010101010101010101010101010609010a0a0a0a0a0a010a0a0a0a0a0a0a0a0a0a0a0a0a0a06090101010101010a010a0101010101010101010101010106090101010101010a010a010101010101010101010101010609010a0a0a0a0a0a010a010a0a0a0a0a0a0a0a0a0a0a010609010a0101010101010a010a0101010101010101010a010609010a010a0a0a0a0a0a010a010a0a0a0a0101010101010609010a01010101010101010a010a01010a0a0a0a0a0a010609010a01010101010101010a010a0101010101010101010609010a0a0a0a0a0a0a0a0a0a010a0101010101010101010609010a010101010101010101010a0a0a0a0a0a0a0a0a010609010a0101010101010101010101010101010101010a01060901010a010a0a0a0a0a010a010a010a0a0a01010a010a060901010a010a0101010a010a010a010a0101010a010a010609010a01010a0101010a0101010a010a01010a010a010a0609010101010a0101010a0101010a010a0101010a010a01060901010a0a0a0101010a0101010a010a0a0a01010a010106040808080808080808080808080808080808080808080805`, img`
-    222222222222222222222222
-    2.2....................2
-    2.2...2222...2.2.2...2.2
-    2.2...2..2...2.2.2...2.2
-    2.2...2..2...2.2.2...2.2
-    2.22222222.22222.2.222.2
-    2......................2
-    2.222222.222222222222222
-    2......2.2.............2
-    2......2.2.............2
-    2.222222.2.22222222222.2
-    2.2......2.2.........2.2
-    2.2.222222.2.2222......2
-    2.2........2.2..222222.2
-    2.2........2.2.........2
-    2.2222222222.2.........2
-    2.2..........222222222.2
-    2.2..............2...2.2
-    2..2.22222.2.2.222.2.2.2
-    2..2.2...2.2.2.222.2.2.2
-    2.2..2...2...2.222.2...2
-    2....2...2...2.222.22222
-    2..222...2...2.222.....2
-    222222222222222222222222
-    `, [myTiles.transparency16,sprites.castle.tileGrass2,sprites.dungeon.greenInnerNorthEast,sprites.dungeon.greenInnerNorthWest,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenInnerSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterEast0,sprites.dungeon.floorLight0], TileScale.Sixteen))
+tiles.setTilemap(tilemap`level1`)
 setCakes()
 music.jumpDown.play()
-let mySprite = sprites.create(img`
+let barvaz_ra = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . b 5 5 b . . . 
+    . . . . . . b b b b b b . . . . 
+    . . . . . b b 5 5 5 5 5 b . . . 
+    . b b b b b 5 5 5 5 5 5 5 b . . 
+    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
+    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
+    . . b d 5 5 b 1 f f 5 4 4 c . . 
+    b b d b 5 5 5 d f b 4 4 4 4 b . 
+    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
+    c d d d c c b 5 5 5 5 5 5 5 b . 
+    c b d d d d d 5 5 5 5 5 5 5 b . 
+    . c d d d d d d 5 5 5 5 5 d b . 
+    . . c b d d d d d 5 5 5 b b . . 
+    . . . c c c c c c c c b b . . . 
+    `, SpriteKind.Enemy)
+let ronen = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -90,6 +106,7 @@ let mySprite = sprites.create(img`
     . . . . f f f f f f f . . . . . 
     . . . . f f f . . . . . . . . . 
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-tiles.placeOnTile(mySprite, tiles.getTileLocation(1, 1))
-scene.cameraFollowSprite(mySprite)
+barvaz_ra.follow(ronen, 100)
+controller.moveSprite(ronen)
+tiles.placeOnTile(ronen, tiles.getTileLocation(1, 1))
+scene.cameraFollowSprite(ronen)
