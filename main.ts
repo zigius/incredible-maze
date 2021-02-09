@@ -57,8 +57,10 @@ function setCakes () {
         `, SpriteKind.Food)
     tiles.placeOnTile(cake_2, tiles.getTileLocation(1, 12))
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-	
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
+    music.bigCrash.play()
+    otherSprite.destroy()
+    game.over(false)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     otherSprite.destroy()
@@ -67,6 +69,24 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 let cake_2: Sprite = null
 let cake_1: Sprite = null
 let cake_0: Sprite = null
+let trophy = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+    . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+    . 5 5 5 5 5 5 f f 5 5 5 5 5 5 . 
+    . 5 . 5 5 5 5 5 f 5 5 5 5 . 5 . 
+    . 5 . 5 5 5 5 5 f 5 5 5 5 . 5 . 
+    . 5 . 5 5 5 5 5 f 5 5 5 5 . 5 . 
+    . 5 5 5 5 5 5 5 f 5 5 5 5 5 5 . 
+    . . . 5 5 5 5 5 f 5 5 5 5 . . . 
+    . . . 5 5 5 5 5 f 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 . . . . 
+    . . . . . 5 5 5 5 5 5 . . . . . 
+    . . . . . . 5 5 5 5 . . . . . . 
+    . e e e e e e e e e e e e e e . 
+    . e e e e e e e e e e e e e e . 
+    `, SpriteKind.Food)
 tiles.setTilemap(tilemap`level1`)
 setCakes()
 music.jumpDown.play()
