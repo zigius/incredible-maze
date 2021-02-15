@@ -1,3 +1,14 @@
+namespace SpriteKind {
+    export const Win = SpriteKind.create()
+    export const Melech = SpriteKind.create()
+}
+sprites.onOverlap(SpriteKind.Melech, SpriteKind.Enemy, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    music.baDing.play()
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Win, function (sprite, otherSprite) {
+    game.over(true)
+})
 function setCakes () {
     cake_0 = sprites.create(img`
         . . . . . . . . . . b b b . . . 
@@ -17,7 +28,6 @@ function setCakes () {
         . . . . . . b b b b 3 d d d b a 
         . . . . . . . . . . b b b a a . 
         `, SpriteKind.Food)
-    tiles.placeOnTile(cake_0, tiles.getTileLocation(1, 10))
     cake_1 = sprites.create(img`
         . . . . . . . . . . b b b . . . 
         . . . . . . . . b e e 3 3 b . . 
@@ -56,6 +66,7 @@ function setCakes () {
         . . . . . . . . . . b b b a a . 
         `, SpriteKind.Food)
     tiles.placeOnTile(cake_2, tiles.getTileLocation(1, 12))
+    tiles.placeOnTile(cake_0, tiles.getTileLocation(1, 10))
 }
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     music.bigCrash.play()
@@ -86,10 +97,27 @@ let trophy = sprites.create(img`
     . . . . . . 5 5 5 5 . . . . . . 
     . e e e e e e e e e e e e e e . 
     . e e e e e e e e e e e e e e . 
-    `, SpriteKind.Food)
+    `, SpriteKind.Win)
 tiles.setTilemap(tilemap`level1`)
+tiles.placeOnTile(trophy, tiles.getTileLocation(1, 9))
 setCakes()
-music.jumpDown.play()
+let puppy = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . 4 4 4 . . . . 4 4 4 . . . . 
+    . 4 5 5 5 e . . e 5 5 5 4 . . . 
+    4 5 5 5 5 5 e e 5 5 5 5 5 4 . . 
+    4 5 5 4 4 5 5 5 5 4 4 5 5 4 . . 
+    e 5 4 4 5 5 5 5 5 5 4 4 5 e . . 
+    . e e 5 5 5 5 5 5 5 5 e e . . . 
+    . . e 5 f 5 5 5 5 f 5 e . . . . 
+    . . f 5 5 5 4 4 5 5 5 f . f f . 
+    . . . 4 5 5 f f 5 5 6 f f 5 f . 
+    . . . f 6 6 6 6 6 6 4 f 5 5 f . 
+    . . . f 5 5 5 5 5 5 5 4 5 f . . 
+    . . . . f 5 4 5 f 5 f f f . . . 
+    . . . . . f f f f f f f . . . . 
+    `, SpriteKind.Melech)
+tiles.placeOnTile(puppy, tiles.getTileLocation(1, 15))
 let barvaz_ra = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -126,7 +154,7 @@ let ronen = sprites.create(img`
     . . . . f f f f f f f . . . . . 
     . . . . f f f . . . . . . . . . 
     `, SpriteKind.Player)
-barvaz_ra.follow(ronen, 100)
+barvaz_ra.follow(ronen, 50)
 controller.moveSprite(ronen)
 tiles.placeOnTile(ronen, tiles.getTileLocation(1, 1))
 scene.cameraFollowSprite(ronen)
