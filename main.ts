@@ -1,6 +1,7 @@
 namespace SpriteKind {
     export const Win = SpriteKind.create()
     export const Melech = SpriteKind.create()
+    export const Treasure = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Melech, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
@@ -74,15 +75,21 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     game.over(false)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
     otherSprite.destroy()
     music.baDing.play()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Melech, function (playersprite, melechSprite) {
     melechSprite.follow(playersprite, 60)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Treasure, function (playersprite, treasureSprite) {
+    treasureSprite.destroy()
+})
+
 let cake_2: Sprite = null
 let cake_1: Sprite = null
 let cake_0: Sprite = null
+info.setScore(0)
 let trophy = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -161,21 +168,21 @@ barvaz_ra.follow(ronen, 50)
 controller.moveSprite(ronen)
 tiles.placeOnTile(ronen, tiles.getTileLocation(1, 1))
 scene.cameraFollowSprite(ronen)
-barvaz_ra = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . 5 . . . . . 
-    . . . . . . . . . . . 5 5 b . . 
-    . . . . . . . . . . . d 4 f . . 
-    . . . . . . . . . f 5 4 4 c . . 
-    . . . . . . . . f b 4 4 4 4 b . 
-    . . . c d 5 5 b 5 4 4 4 4 4 4 b 
-    . . . . c c b 5 5 5 5 5 5 5 b . 
-    . . . . . . . . . . . . . . b . 
-    . . . . . . . . . . . . . . b . 
-    . . . . . . . . . . . . b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Enemy)
+let treasure_0 = sprites.create(img`
+    e e e e e e e e e e e e e e e e 
+    e 6 6 5 6 5 5 6 6 5 4 4 4 4 6 e 
+    e 5 5 6 5 6 6 6 5 6 5 5 4 4 6 e 
+    e 4 4 5 9 5 6 6 6 6 6 5 5 5 6 e 
+    e 4 5 9 9 5 6 5 5 4 6 4 6 6 5 e 
+    e 4 4 4 2 2 4 5 7 5 6 2 2 6 5 e 
+    e 4 7 5 2 2 5 5 7 7 4 2 2 6 6 e 
+    e 7 5 f 4 5 f 7 5 f f 5 5 f 7 e 
+    e 4 f 9 a 4 4 f 5 f 4 7 7 4 f e 
+    e 7 a a a a a 5 4 5 7 4 4 5 7 e 
+    e 7 f 7 a 4 7 f 4 f 7 4 7 7 f e 
+    e 5 5 f 7 5 f 5 7 5 f 7 4 f 7 e 
+    e 5 5 7 2 2 5 7 7 5 5 2 2 5 7 e 
+    e 7 7 5 2 2 7 5 7 4 7 2 2 5 7 e 
+    e 5 5 7 7 5 5 5 5 7 5 5 7 7 7 e 
+    e e e e e e e e e e e e e e e e 
+    `, SpriteKind.Treasure)
