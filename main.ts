@@ -77,6 +77,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     otherSprite.destroy()
     music.baDing.play()
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Melech, function (playersprite, melechSprite) {
+    melechSprite.follow(playersprite, 60)
+})
 let cake_2: Sprite = null
 let cake_1: Sprite = null
 let cake_0: Sprite = null
@@ -99,7 +102,7 @@ let trophy = sprites.create(img`
     . e e e e e e e e e e e e e e . 
     `, SpriteKind.Win)
 tiles.setTilemap(tilemap`level1`)
-tiles.placeOnTile(trophy, tiles.getTileLocation(1, 9))
+tiles.placeOnTile(trophy, tiles.getTileLocation(22, 22))
 setCakes()
 let puppy = sprites.create(img`
     . . . . . . . . . . . . . . . . 
@@ -158,3 +161,21 @@ barvaz_ra.follow(ronen, 50)
 controller.moveSprite(ronen)
 tiles.placeOnTile(ronen, tiles.getTileLocation(1, 1))
 scene.cameraFollowSprite(ronen)
+barvaz_ra = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . 5 . . . . . 
+    . . . . . . . . . . . 5 5 b . . 
+    . . . . . . . . . . . d 4 f . . 
+    . . . . . . . . . f 5 4 4 c . . 
+    . . . . . . . . f b 4 4 4 4 b . 
+    . . . c d 5 5 b 5 4 4 4 4 4 4 b 
+    . . . . c c b 5 5 5 5 5 5 5 b . 
+    . . . . . . . . . . . . . . b . 
+    . . . . . . . . . . . . . . b . 
+    . . . . . . . . . . . . b b . . 
+    . . . c c c c c c c c b b . . . 
+    `, SpriteKind.Enemy)
