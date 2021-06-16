@@ -2,10 +2,15 @@ namespace SpriteKind {
     export const Win = SpriteKind.create()
     export const Melech = SpriteKind.create()
     export const Treasure = SpriteKind.create()
+    export const kill = SpriteKind.create()
+    export const weapon = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Melech, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
     music.baDing.play()
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Treasure, function (playersprite, treasureSprite) {
+    treasureSprite.destroy()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Win, function (sprite, otherSprite) {
     game.over(true)
@@ -74,6 +79,27 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     otherSprite.destroy()
     game.over(false)
 })
+function bbbuuutttbbb () {
+    butb = sprites.create(img`
+        . . . . . . . . . . 2 2 2 . . . 
+        . . . . . . . . . . 2 f 2 . . . 
+        . . . . . . . . . . f 2 2 . . . 
+        . . . . . . . . . f . . . . . . 
+        . . . . . . . . . f . . . . . . 
+        . . . . . . . c c c . . . . . . 
+        . . . . . . a b a a . . . . . . 
+        . . . . . c b a f c a c . . . . 
+        . . . . c b b b f f a c c . . . 
+        . . . . b b f a b b a a c . . . 
+        . . . . c b f f b a f c a . . . 
+        . . . . . c a a c b b a . . . . 
+        . . . . . . c c c c . . . . . . 
+        . . . . . . . c . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.weapon)
+    tiles.placeOnTile(butb, tiles.getTileLocation(2, 19))
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     info.changeScoreBy(1)
     otherSprite.destroy()
@@ -82,14 +108,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Melech, function (playersprite, melechSprite) {
     melechSprite.follow(playersprite, 60)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Treasure, function (playersprite, treasureSprite) {
-    treasureSprite.destroy()
-})
-
+let butb: Sprite = null
 let cake_2: Sprite = null
 let cake_1: Sprite = null
 let cake_0: Sprite = null
-info.setScore(0)
+info.setScore(7)
 let trophy = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -111,6 +134,7 @@ let trophy = sprites.create(img`
 tiles.setTilemap(tilemap`level1`)
 tiles.placeOnTile(trophy, tiles.getTileLocation(22, 22))
 setCakes()
+bbbuuutttbbb()
 let puppy = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . 4 4 4 . . . . 4 4 4 . . . . 
