@@ -9,6 +9,9 @@ sprites.onOverlap(SpriteKind.Melech, SpriteKind.Enemy, function (sprite, otherSp
     otherSprite.destroy()
     music.baDing.play()
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    explode_bomb()
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Treasure, function (playersprite, treasureSprite) {
     treasureSprite.destroy()
 })
@@ -105,9 +108,21 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     otherSprite.destroy()
     music.baDing.play()
 })
+function explode_bomb () {
+    if (bomb_bag == 1) {
+        music.bigCrash.play()
+    } else {
+    	
+    }
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.weapon, function (sprite, otherSprite) {
+    bomb_bag = 1
+    butb.destroy()
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Melech, function (playersprite, melechSprite) {
     melechSprite.follow(playersprite, 60)
 })
+let bomb_bag = 0
 let butb: Sprite = null
 let cake_2: Sprite = null
 let cake_1: Sprite = null
