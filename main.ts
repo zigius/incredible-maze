@@ -208,20 +208,20 @@ controller.moveSprite(ronen)
 tiles.placeOnTile(ronen, tiles.getTileLocation(1, 1))
 scene.cameraFollowSprite(ronen)
 let treasure_0 = sprites.create(img`
-    e e e e e e e e e e e e e e e e 
-    e 6 6 5 6 5 5 6 6 5 4 4 4 4 6 e 
-    e 5 5 6 5 6 6 6 5 6 5 5 4 4 6 e 
-    e 4 4 5 9 5 6 6 6 6 6 5 5 5 6 e 
-    e 4 5 9 9 5 6 5 5 4 6 4 6 6 5 e 
-    e 4 4 4 2 2 4 5 7 5 6 2 2 6 5 e 
-    e 4 7 5 2 2 5 5 7 7 4 2 2 6 6 e 
-    e 7 5 f 4 5 f 7 5 f f 5 5 f 7 e 
-    e 4 f 9 a 4 4 f 5 f 4 7 7 4 f e 
-    e 7 a a a a a 5 4 5 7 4 4 5 7 e 
-    e 7 f 7 a 4 7 f 4 f 7 4 7 7 f e 
-    e 5 5 f 7 5 f 5 7 5 f 7 4 f 7 e 
-    e 5 5 7 2 2 5 7 7 5 5 2 2 5 7 e 
-    e 7 7 5 2 2 7 5 7 4 7 2 2 5 7 e 
-    e 5 5 7 7 5 5 5 5 7 5 5 7 7 7 e 
-    e e e e e e e e e e e e e e e e 
-    `, SpriteKind.Treasure)
+    f f f f f f f f f f f f f f f f
+    f b e e e e e e e e e e e e b f
+    f e e e e e e e e e e e e e e f
+    4 5 4 4 4 5 5 5 5 5 5 5 5 5 5 4
+    4 5 5 5 5 4 5 5 f 5 5 4 5 5 4 5
+    5 4 4 5 5 4 5 5 f 5 5 4 5 4 5 5
+    5 4 5 4 5 5 4 4 5 5 5 4 5 5 5 5
+    f e e e e e e 5 e 5 e e e e e f
+    f e e e e e 5 e e e 5 e e e e f
+    f e e e e e e 5 e 5 e e e e e f
+    f e e e e e e e 5 e e e e e e f
+    f e e e e e e e e e e e e e e f
+    f e e e e e e e e e e e e e e f
+    f e e e e e e e e e e e e e e f
+    f b e e e e e e e e e e e e b f
+    f f f f f f f f f f f f f f f f
+`, SpriteKind.Treasure)
