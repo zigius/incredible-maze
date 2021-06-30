@@ -3,7 +3,25 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-
+            case "9r,x@eM;L+Hllz;mq8bw":
+            case "exploding_bomb":return img`
+2 b b b b b b b b b b b b b 2 2 
+b b 2 b b 2 2 2 2 2 2 2 2 b 2 2 
+b 2 2 2 2 2 2 2 b b b b b b 2 2 
+b 2 b 2 2 b b b 2 2 b 2 2 b 2 2 
+b 2 b 2 b 2 2 b b b 2 2 2 b b 2 
+b 2 b 2 b b 2 2 b b b 2 2 2 b b 
+b 2 2 b b b b 2 2 b b 2 b b 2 b 
+b 2 2 2 2 2 2 b b 2 2 2 b b 2 b 
+b 2 2 2 b b b 2 2 2 2 2 2 2 2 b 
+b b 2 2 2 2 2 2 2 2 b 2 b b b b 
+b b b b 2 2 2 2 2 2 2 2 2 2 b b 
+b 2 2 2 b b 2 2 2 2 b 2 b b 2 2 
+2 2 2 2 2 2 2 2 2 2 b b 2 2 2 2 
+2 b 2 2 2 b b b b 2 2 2 2 2 b b 
+2 2 2 2 2 2 2 2 2 2 2 2 b b b 2 
+b b 2 2 2 2 2 2 2 2 2 2 2 2 b 2 
+`;
         }
         return null;
     })

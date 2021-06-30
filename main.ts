@@ -111,8 +111,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 function explode_bomb () {
     if (bomb_bag == 1) {
         music.bigCrash.play()
-    } else {
-    	
+        tiles.placeOnTile(butb, tiles.getTileLocation(1, 11))
+        exploding_bomb = sprites.create(assets.image`exploding_bomb`, SpriteKind.kill)
+        tiles.placeOnTile(exploding_bomb, tiles.getTileLocation(1, 11))
+        exploding_bomb.setPosition(ronen.x, ronen.y)
     }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.weapon, function (sprite, otherSprite) {
@@ -122,11 +124,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.weapon, function (sprite, otherS
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Melech, function (playersprite, melechSprite) {
     melechSprite.follow(playersprite, 60)
 })
+let exploding_bomb: Sprite = null
 let bomb_bag = 0
 let butb: Sprite = null
 let cake_2: Sprite = null
 let cake_1: Sprite = null
 let cake_0: Sprite = null
+let ronen: Sprite = null
 info.setScore(7)
 let trophy = sprites.create(img`
     . . . . . . . . . . . . . . . . 
@@ -185,7 +189,7 @@ let barvaz_ra = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Enemy)
-let ronen = sprites.create(img`
+ronen = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -208,20 +212,20 @@ controller.moveSprite(ronen)
 tiles.placeOnTile(ronen, tiles.getTileLocation(1, 1))
 scene.cameraFollowSprite(ronen)
 let treasure_0 = sprites.create(img`
-    f f f f f f f f f f f f f f f f
-    f b e e e e e e e e e e e e b f
-    f e e e e e e e e e e e e e e f
-    4 5 4 4 4 5 5 5 5 5 5 5 5 5 5 4
-    4 5 5 5 5 4 5 5 f 5 5 4 5 5 4 5
-    5 4 4 5 5 4 5 5 f 5 5 4 5 4 5 5
-    5 4 5 4 5 5 4 4 5 5 5 4 5 5 5 5
-    f e e e e e e 5 e 5 e e e e e f
-    f e e e e e 5 e e e 5 e e e e f
-    f e e e e e e 5 e 5 e e e e e f
-    f e e e e e e e 5 e e e e e e f
-    f e e e e e e e e e e e e e e f
-    f e e e e e e e e e e e e e e f
-    f e e e e e e e e e e e e e e f
-    f b e e e e e e e e e e e e b f
-    f f f f f f f f f f f f f f f f
-`, SpriteKind.Treasure)
+    f f f f f f f f f f f f f f f f 
+    f b e e e e e e e e e e e e b f 
+    f e e e e e e e e e e e e e e f 
+    4 5 4 4 4 5 5 5 5 5 5 5 5 5 5 4 
+    4 5 5 5 5 4 5 5 f 5 5 4 5 5 4 5 
+    5 4 4 5 5 4 5 5 f 5 5 4 5 4 5 5 
+    5 4 5 4 5 5 4 4 5 5 5 4 5 5 5 5 
+    f e e e e e e 5 e 5 e e e e e f 
+    f e e e e e 5 e e e 5 e e e e f 
+    f e e e e e e 5 e 5 e e e e e f 
+    f e e e e e e e 5 e e e e e e f 
+    f e e e e e e e e e e e e e e f 
+    f e e e e e e e e e e e e e e f 
+    f e e e e e e e e e e e e e e f 
+    f b e e e e e e e e e e e e b f 
+    f f f f f f f f f f f f f f f f 
+    `, SpriteKind.Treasure)
