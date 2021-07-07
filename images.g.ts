@@ -5,22 +5,22 @@ namespace myImages {
         switch(helpers.stringTrim(name)) {
             case "9r,x@eM;L+Hllz;mq8bw":
             case "exploding_bomb":return img`
-2 b b b b b b b b b b b b b 2 2 
-b b 2 b b 2 2 2 2 2 2 2 2 b 2 2 
-b 2 2 2 2 2 2 2 b b b b b b 2 2 
-b 2 b 2 2 b b b 2 2 b 2 2 b 2 2 
-b 2 b 2 b 2 2 b b b 2 2 2 b b 2 
-b 2 b 2 b b 2 2 b b b 2 2 2 b b 
-b 2 2 b b b b 2 2 b b 2 b b 2 b 
-b 2 2 2 2 2 2 b b 2 2 2 b b 2 b 
-b 2 2 2 b b b 2 2 2 2 2 2 2 2 b 
-b b 2 2 2 2 2 2 2 2 b 2 b b b b 
-b b b b 2 2 2 2 2 2 2 2 2 2 b b 
-b 2 2 2 b b 2 2 2 2 b 2 b b 2 2 
-2 2 2 2 2 2 2 2 2 2 b b 2 2 2 2 
-2 b 2 2 2 b b b b 2 2 2 2 2 b b 
-2 2 2 2 2 2 2 2 2 2 2 2 b b b 2 
-b b 2 2 2 2 2 2 2 2 2 2 2 2 b 2 
+. . . . . . . . . 5 5 2 . . . . 
+. . . . . . 2 5 5 5 4 2 5 5 . . 
+. . . 5 5 2 2 f 5 4 f f f 5 5 . 
+. . 5 5 5 f f f 5 4 4 f f 2 5 5 
+2 5 5 5 f f f f 5 5 4 4 2 2 5 2 
+5 5 5 1 f f f 2 4 5 5 4 4 4 2 5 
+5 4 4 1 1 2 4 1 5 2 2 5 5 5 5 5 
+4 f 5 4 4 1 1 4 5 5 2 5 5 f f 5 
+4 2 f 5 4 4 5 5 4 5 4 5 f f f 5 
+5 4 2 4 4 5 5 5 5 4 4 f f f 2 4 
+. 4 5 4 4 5 f f 4 4 1 2 f f 5 4 
+. . 5 5 1 4 f f f 4 1 1 5 5 2 5 
+. . . 2 1 1 4 f f 2 2 4 1 2 5 . 
+. . . 5 2 1 1 1 2 2 4 5 5 5 5 . 
+. . . . 5 5 4 1 1 5 5 5 . . . . 
+. . . . . 5 5 5 5 2 5 . . . . . 
 `;
         }
         return null;

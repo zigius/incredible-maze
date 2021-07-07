@@ -1,5 +1,5 @@
 {
-    "name": "incredible-maze",
+    "name": "a-MAZE-ing food hunt",
     "version": "0.1.0",
     "description": "",
     "dependencies": {
@@ -12,7 +12,8 @@
         "tilemap.g.jres",
         "tilemap.g.ts",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"
