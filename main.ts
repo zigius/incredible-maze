@@ -84,21 +84,21 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
 })
 function bbbuuutttbbb () {
     butb = sprites.create(img`
-        . . . . . . . . . . 2 2 2 . . . 
-        . . . . . . . . . . 2 f 2 . . . 
-        . . . . . . . . . . f 2 2 . . . 
-        . . . . . . . . . f . . . . . . 
-        . . . . . . . . . f . . . . . . 
-        . . . . . . . c c c . . . . . . 
-        . . . . . . a b a a . . . . . . 
-        . . . . . c b a f c a c . . . . 
-        . . . . c b b b f f a c c . . . 
-        . . . . b b f a b b a a c . . . 
-        . . . . c b f f b a f c a . . . 
-        . . . . . c a a c b b a . . . . 
-        . . . . . . c c c c . . . . . . 
-        . . . . . . . c . . . . . . . . 
         . . . . . . . . . . . . . . . . 
+        . . . . . . f f f f c c c . 2 . 
+        . . . . f f f e e c f f . c 4 2 
+        . . . d d d d f f f f f f 2 5 4 
+        . . f d d d d f f f 1 1 f f 2 . 
+        . . d d d d d f f f 1 1 e f . . 
+        . f d d d d f f f f f e e f f . 
+        . f d d d f f f b b b b e f f . 
+        . f f d d f f b b b b b f f f . 
+        . f 2 d d f f b b b b b f f f . 
+        . . f f d d f b b b b b f f . . 
+        . . f f f d f f b b b f f f . . 
+        . . . f f f f f f f f f f . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . . . . f f f f . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.weapon)
     tiles.placeOnTile(butb, tiles.getTileLocation(2, 19))
@@ -154,20 +154,22 @@ tiles.placeOnTile(trophy, tiles.getTileLocation(22, 22))
 setCakes()
 bbbuuutttbbb()
 let puppy = sprites.create(img`
-    . . . . . . . . . . . . . . 
-    e e e . . . . e e e . . . . 
-    c d d c . . c d d c . . . . 
-    c b d d f f d d b c . . . . 
-    c 3 b d d b d b 3 c . . . . 
-    f b 3 d d d d 3 b f . . . . 
-    e d d d d d d d d e . . . . 
-    e d f d d d d f d e . b f b 
-    f d d f d d f d d f . f d f 
-    f b d d b b d d 2 b f f d f 
-    . f 2 2 2 2 2 2 d b b d b f 
-    . f d d d d d d d f f f f . 
-    . . f d b d f d f . . . . . 
-    . . . f f f f f f . . . . . 
+    . . . . f f f f f . . . . . . . 
+    . . . f e e e e e f . . . . . . 
+    . . f d d d d e e e f . . . . . 
+    . c d f d d f d e e f f . . . . 
+    . c d f d d f d e e d d f . . . 
+    c d e e d d d d e e b d c . . . 
+    c d d d d c d d e e b d c . f f 
+    c c c c c d d d e e f c . f e f 
+    . f d d d d d e e f f . . f e f 
+    . . f f f f f e e e e f . f e f 
+    . . . . f e e e e e e e f f e f 
+    . . . f e f f e f e e e e f f . 
+    . . . f e f f e f e e e e f . . 
+    . . . f d b f d b f f e f . . . 
+    . . . f d d c d d b b d f . . . 
+    . . . . f f f f f f f f f . . . 
     `, SpriteKind.Melech)
 tiles.placeOnTile(puppy, tiles.getTileLocation(1, 15))
 let barvaz_ra = sprites.create(img`
