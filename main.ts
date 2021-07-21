@@ -114,6 +114,7 @@ function explode_bomb () {
         exploding_bomb = sprites.create(assets.image`exploding_bomb`, SpriteKind.kill)
         tiles.placeOnTile(exploding_bomb, tiles.getTileLocation(1, 11))
         exploding_bomb.setPosition(ronen.x, ronen.y)
+        info.startCountdown(10)
     }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.weapon, function (sprite, otherSprite) {
