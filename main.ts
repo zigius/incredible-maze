@@ -201,9 +201,9 @@ let barvaz_ra = sprites.create(img`
     `, SpriteKind.Enemy)
 ronen = sprites.create(img`
     . . . . . . . . . . . . 
-    . . . . f f f f f . . . 
-    . . f f f f f f f f . . 
-    . f f f 4 f f f f f f . 
+    . . . . f f f f . . . . 
+    . . . f f f f f f f . . 
+    . . f f 4 f f f f f f . 
     . f f 4 4 4 f f f f f f 
     f f f 4 4 4 4 f f f f f 
     f 4 f 4 4 4 4 4 4 f 4 f 
