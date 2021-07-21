@@ -231,9 +231,9 @@ let treasure_0 = sprites.create(img`
     5 4 5 4 5 5 4 4 5 5 5 4 5 5 5 5 
     f e e e e e e 5 e 5 e e e e e f 
     f e e e e e 5 e e e 5 e e e e f 
+    f e e e e e 5 e e e 5 e e e e f 
     f e e e e e e 5 e 5 e e e e e f 
     f e e e e e e e 5 e e e e e e f 
-    f e e e e e e e e e e e e e e f 
     f e e e e e e e e e e e e e e f 
     f e e e e e e e e e e e e e e f 
     f b e e e e e e e e e e e e b f 
