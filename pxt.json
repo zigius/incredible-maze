@@ -1,23 +1,20 @@
 {
     "name": "a-MAZE-ing food hunt",
-    "version": "0.1.0",
-    "description": "",
     "dependencies": {
         "device": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
         "README.md",
-        "tilemap.g.jres",
-        "tilemap.g.ts",
         "images.g.jres",
         "images.g.ts",
-        "main.py",
-        null
-    ],
-    "testFiles": [
-        "test.ts"
+        "main.blocks",
+        "main.ts",
+        "test.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "tsconfig.json"
     ],
     "targetVersions": {
         "target": "1.4.45",

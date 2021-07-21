@@ -169,7 +169,7 @@ let puppy = sprites.create(img`
     ......ffffcfdb1b1f......
     .......fcccfcfbfbf......
     ........ffffffffff......
-    .........ffffff.........
+    .........ffffffff.......
     .........ffffff.........
     .....f..fffffff.........
     .....fffffffff..........
@@ -199,22 +199,22 @@ let barvaz_ra = sprites.create(img`
     . . . d d d d d d d d d d . . . 
     `, SpriteKind.Enemy)
 ronen = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . f f f f . . . . . . 
-    . . . . f f f 2 2 f f f . . . . 
-    . . . f f f 2 2 2 2 f f f . . . 
-    . . f f f e e e e e e f f f . . 
-    . . f f e 2 2 2 2 2 2 e e f . . 
-    . f f e 2 f f f f f f 2 e f f . 
-    . f f f f f e e e e f f f f f . 
-    . . f e f b f 4 4 f b f e f . . 
-    . . f e 4 1 f d d f 1 4 e f . . 
-    . . . f e 4 d d d d 4 e f e . . 
-    . . f e f 2 2 2 2 e d d 4 e . . 
-    . . e 4 f 2 2 2 2 e d d e . . . 
-    . . . . f 4 4 5 5 f e e . . . . 
-    . . . . f f f f f f f . . . . . 
-    . . . . f f f . . . . . . . . . 
+    . . . . . . . . . . . . 
+    . . . . f f . . . . . . 
+    . . . f f f f f . . . . 
+    . . f f 4 f f f f f . . 
+    . f f 4 4 4 f f f f f . 
+    f f f 4 4 4 4 f f f f f 
+    f 4 f 4 4 4 4 4 4 f 4 f 
+    f 4 4 1 f 4 4 f 1 4 4 f 
+    . f 4 4 4 4 4 4 4 4 f . 
+    . . f 4 4 2 2 4 4 f . . 
+    . b b b 4 4 4 4 b b b . 
+    b 4 b b 1 1 1 1 b b 4 b 
+    4 d b 1 1 1 1 1 1 b d 4 
+    4 4 b 8 8 5 5 8 8 b 4 4 
+    . . . f f f f f f . . . 
+    . . . f f . . f f . . . 
     `, SpriteKind.Player)
 barvaz_ra.follow(ronen, 50)
 controller.moveSprite(ronen)

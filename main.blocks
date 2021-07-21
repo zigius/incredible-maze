@@ -131,7 +131,7 @@ e 5 4 4 5 5 5 5 5 5 4 4 5 e . .
 ......ffffcfdb1b1f......
 .......fcccfcfbfbf......
 ........ffffffffff......
-.........ffffff.........
+.........ffffffff.......
 .........ffffff.........
 .....f..fffffff.........
 .....fffffffff..........
@@ -158,22 +158,22 @@ f b b b b b b b b b b f . . . .
 . . d c 1 1 1 1 1 b c c d d . . 
 . . . d d d d d d d d d d . . . 
 `</field><data>{"commentRefs":[],"fieldData":{"img":"4wD,D-5JoW)6:1+Zl#%O"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="=}b6AB-iuRb)39J),`9`"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="4r+7~sqj%L`WUXRMv*px"><field name="VAR" id="mgPDA-){3(([$g1}{d8B">ronen</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="O;5IRcou#c+=I=.N`^wI"><value name="img"><shadow type="screen_image_picker" id="C}F$DNHKP1~.)b=qA@;="><field name="img">img`
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . f f f 2 2 f f f . . . . 
-. . . f f f 2 2 2 2 f f f . . . 
-. . f f f e e e e e e f f f . . 
-. . f f e 2 2 2 2 2 2 e e f . . 
-. f f e 2 f f f f f f 2 e f f . 
-. f f f f f e e e e f f f f f . 
-. . f e f b f 4 4 f b f e f . . 
-. . f e 4 1 f d d f 1 4 e f . . 
-. . . f e 4 d d d d 4 e f e . . 
-. . f e f 2 2 2 2 e d d 4 e . . 
-. . e 4 f 2 2 2 2 e d d e . . . 
-. . . . f 4 4 5 5 f e e . . . . 
-. . . . f f f f f f f . . . . . 
-. . . . f f f . . . . . . . . . 
+. . . . . . . . . . . . 
+. . . . f f . . . . . . 
+. . . f f f f f . . . . 
+. . f f 4 f f f f f . . 
+. f f 4 4 4 f f f f f . 
+f f f 4 4 4 4 f f f f f 
+f 4 f 4 4 4 4 4 4 f 4 f 
+f 4 4 1 f 4 4 f 1 4 4 f 
+. f 4 4 4 4 4 4 4 4 f . 
+. . f 4 4 2 2 4 4 f . . 
+. b b b 4 4 4 4 b b b . 
+b 4 b b 1 1 1 1 b b 4 b 
+4 d b 1 1 1 1 1 1 b d 4 
+4 4 b 8 8 5 5 8 8 b 4 4 
+. . . f f f f f f . . . 
+. . . f f . . f f . . . 
 `</field><data>{"commentRefs":[],"fieldData":{"img":"C}F$DNHKP1~.)b=qA@;="}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="4%0:]B;QC9SHsq}_VnL;"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spriteFollowOtherSprite" id="pY;YlRw[Pee9`Kw{SFS("><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="x^4n[m#32,S])g;JFt;S"><field name="VAR" id="`xVnA~nl*yMS?+a-2asP">barvaz_ra</field></block></value><value name="target"><shadow type="variables_get" id=";=?#k:`kl~{;I{PYF2lm"><field name="VAR" id="mgPDA-){3(([$g1}{d8B">ronen</field></shadow></value><value name="speed"><shadow type="math_number" id="K)+bQI}o//NE*PoU3qXW"><field name="NUM">50</field></shadow></value><next><block type="game_control_sprite" id="!_08!+e(S{`r=UD1.dOW"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><shadow type="variables_get" id="G/%DF1Lw!:AbS9HZ/~gJ"><field name="VAR" id="mgPDA-){3(([$g1}{d8B">ronen</field></shadow></value><next><block type="mapplaceontile" id="aXNRkL@3Jt1L1y?IV=qy"><value name="sprite"><shadow type="variables_get" id="ZU?O}+*PolfCYe[U;|Ip"><field name="VAR" id="mgPDA-){3(([$g1}{d8B">ronen</field></shadow></value><value name="loc"><shadow type="mapgettile" id="LK=D@+^7M{Ho7CXZk;n_"><value name="col"><shadow type="math_number" id="fF`D_jyT,uE@/GpGs(K;"><field name="NUM">1</field></shadow></value><value name="row"><shadow type="math_number" id="`4UDq_^,Q,Gw+]caAM.C"><field name="NUM">1</field></shadow></value></shadow></value><next><block type="camerafollow" id="G#d5%T[oNcezT+diF2S]"><value name="sprite"><shadow type="variables_get" id="IFU:0kP0RLYJQ`Kds]Lg"><field name="VAR" id="mgPDA-){3(([$g1}{d8B">ronen</field></shadow></value><next><block type="variables_set" id="NXhud;RH7yUXozX!u=4i"><field name="VAR" id="SQG#pw91E`CuQOm9R[9c">treasure_0</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="sef3og7@yOT*%oH;dXYN"><value name="img"><shadow type="screen_image_picker" id="VgQr)Z`X`(w!.t4^3#%e"><field name="img">img`
 f f f f f f f f f f f f f f f f 
 f b e e e e e e e e e e e e b f 
