@@ -174,22 +174,22 @@ let puppy = sprites.create(img`
     `, SpriteKind.Melech)
 tiles.placeOnTile(puppy, tiles.getTileLocation(1, 15))
 let barvaz_ra = sprites.create(img`
-    . . . d d d d d d . . . . . . . 
-    . . d c b b b b c d . . . . . . 
-    . d b b b b b b b b d . . . . . 
-    d b b b b b b b b b c d . . . . 
-    d b d c c c c d b b b d . . . . 
-    f b c f c c f c b b b f . . . . 
-    f b b b b b b b b b b f . . . . 
-    . f b b b b c d b b c f . . . . 
-    . . f d d d d b b c f d d d . . 
-    . . d c 2 b b b f d d b b b d . 
-    . d c b b 2 b b d f c b b b b d 
-    . d 1 1 1 1 b c c d c c c d d d 
-    . d 1 1 1 1 1 c c c c c c d . . 
-    . d c 1 1 1 1 1 c c c c c d . . 
-    . . d c 1 1 1 1 1 b c c d d . . 
-    . . . d d d d d d d d d d . . . 
+    . . . 5 5 5 5 5 5 . . . . . . . 
+    . . 5 4 2 2 2 2 4 5 . . . . . . 
+    . 5 2 2 2 2 2 2 2 2 5 . . . . . 
+    5 4 2 2 2 2 2 2 2 2 4 5 . . . . 
+    5 2 5 4 4 4 4 5 2 2 2 5 . . . . 
+    f 2 4 f 4 4 f 4 2 2 2 f . . . . 
+    f 2 2 2 2 2 2 2 2 2 2 f . . . . 
+    . f 2 2 2 2 4 5 2 2 4 f . . . . 
+    . . f 5 5 5 5 2 2 4 f 5 5 5 . . 
+    . . 5 4 f 2 2 2 f 5 5 2 2 2 5 . 
+    . 5 4 2 2 f 2 2 5 f 4 2 2 2 2 5 
+    . 5 1 1 1 1 2 4 4 5 4 4 4 5 5 5 
+    . 5 1 1 1 1 1 4 4 4 4 4 4 5 . . 
+    . 5 4 1 1 1 1 1 4 4 4 4 4 5 . . 
+    . . 5 4 1 1 1 1 1 2 4 4 5 5 . . 
+    . . . 5 5 5 5 5 5 5 5 5 5 . . . 
     `, SpriteKind.Enemy)
 ronen = sprites.create(img`
     . . . . . . . . . . . . 

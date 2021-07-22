@@ -33,22 +33,22 @@ c 8 8 3 3 8 8 8 8 8 d d d c . .
 . . . . c c c c c c c . . . . . 
 . . . . c b b b c . . . . . . . 
 `</field><data>{"commentRefs":[],"fieldData":{"img":"fK?A_jtw,]NegGlz,/`B"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="+,fH~-QJ.6]}TJOia*v("><field name="MEMBER">Melech</field></shadow></value></block></value><next><block type="mapplaceontile" id="u^f(Jfs`hRZ|Dwjyy!IE"><value name="sprite"><shadow type="variables_get" id="?Sle),{vy{D,W$(G%(f9"><field name="VAR" id="HWK(E=UF8|WN,#X]$P-K">puppy</field></shadow></value><value name="loc"><shadow type="mapgettile" id="Go~~iD`h~C!#{o!)^n7M"><value name="col"><shadow type="math_number" id="Jz:W@S^#sHbP,?V/V|dK"><field name="NUM">1</field></shadow></value><value name="row"><shadow type="math_number" id="1;,,p6:U|g+pgYDvT9F/"><field name="NUM">15</field></shadow></value></shadow></value><next><block type="variables_set" id="`ojqx1]{9tP~Mw}l^KEF"><field name="VAR" id="oQO[4vYxJmhs:teuo#%6">barvaz_ra</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="jBaH^$Rg`m9p*ztyomm:"><value name="img"><shadow type="screen_image_picker" id="8g`UG98d.f85}mKA`#v0"><field name="img">img`
-. . . d d d d d d . . . . . . . 
-. . d c b b b b c d . . . . . . 
-. d b b b b b b b b d . . . . . 
-d b b b b b b b b b c d . . . . 
-d b d c c c c d b b b d . . . . 
-f b c f c c f c b b b f . . . . 
-f b b b b b b b b b b f . . . . 
-. f b b b b c d b b c f . . . . 
-. . f d d d d b b c f d d d . . 
-. . d c 2 b b b f d d b b b d . 
-. d c b b 2 b b d f c b b b b d 
-. d 1 1 1 1 b c c d c c c d d d 
-. d 1 1 1 1 1 c c c c c c d . . 
-. d c 1 1 1 1 1 c c c c c d . . 
-. . d c 1 1 1 1 1 b c c d d . . 
-. . . d d d d d d d d d d . . . 
+. . . 5 5 5 5 5 5 . . . . . . . 
+. . 5 4 2 2 2 2 4 5 . . . . . . 
+. 5 2 2 2 2 2 2 2 2 5 . . . . . 
+5 4 2 2 2 2 2 2 2 2 4 5 . . . . 
+5 2 5 4 4 4 4 5 2 2 2 5 . . . . 
+f 2 4 f 4 4 f 4 2 2 2 f . . . . 
+f 2 2 2 2 2 2 2 2 2 2 f . . . . 
+. f 2 2 2 2 4 5 2 2 4 f . . . . 
+. . f 5 5 5 5 2 2 4 f 5 5 5 . . 
+. . 5 4 f 2 2 2 f 5 5 2 2 2 5 . 
+. 5 4 2 2 f 2 2 5 f 4 2 2 2 2 5 
+. 5 1 1 1 1 2 4 4 5 4 4 4 5 5 5 
+. 5 1 1 1 1 1 4 4 4 4 4 4 5 . . 
+. 5 4 1 1 1 1 1 4 4 4 4 4 5 . . 
+. . 5 4 1 1 1 1 1 2 4 4 5 5 . . 
+. . . 5 5 5 5 5 5 5 5 5 5 . . . 
 `</field><data>{"commentRefs":[],"fieldData":{"img":"8g`UG98d.f85}mKA`#v0"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id=":?Na};Iwi*m*!?z@;De,"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="Z|ON~N;X+DzVpU)]D$fl"><field name="VAR" id="aKk($TxU1UHe5476@@pG">ronen</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="l_|p4q,$,E;arBe4:lbE"><value name="img"><shadow type="screen_image_picker" id="=K-eQ.S}-l^a0cd89#pa"><field name="img">img`
 . . . . . . . . . . . . 
 . . . . f f f f . . . . 
