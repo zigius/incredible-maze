@@ -1,7 +1,8 @@
 {
     "name": "a-MAZE-ing food hunt",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0"
     },
     "files": [
         ".vscode/settings.json",
