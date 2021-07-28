@@ -1,8 +1,7 @@
 {
     "name": "a-MAZE-ing food hunt",
     "dependencies": {
-        "device": "*",
-        "Timers": "github:microsoft/arcade-timers#v1.1.0"
+        "device": "*"
     },
     "files": [
         ".vscode/settings.json",
@@ -15,8 +14,7 @@
         "test.ts",
         "tilemap.g.jres",
         "tilemap.g.ts",
-        "tsconfig.json",
-        null
+        "tsconfig.json"
     ],
     "targetVersions": {
         "target": "1.4.45",
