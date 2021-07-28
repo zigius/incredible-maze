@@ -110,11 +110,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 })
 function explode_bomb () {
     if (bomb_bag == 1) {
-        music.bigCrash.play()
         exploding_bomb = sprites.create(assets.image`exploding_bomb`, SpriteKind.kill)
         tiles.placeOnTile(exploding_bomb, tiles.getTileLocation(1, 11))
         exploding_bomb.setPosition(ronen.x, ronen.y)
-        info.startCountdown(10)
+        timer.after(5000, function () {
+            music.bigCrash.play()
+        })
     }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.weapon, function (sprite, otherSprite) {
