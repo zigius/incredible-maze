@@ -111,42 +111,42 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 function explode_bomb () {
     if (bomb_bag == 1) {
         exploding_bomb = sprites.create(img`
-            . . . . . . . . . . . . 2 2 4 . 
-            . . . . . . f f f f c c c 5 4 2 
-            . . . . f f f e e c f f 2 4 2 . 
-            . . . d d d d f f f f f f 2 . . 
-            . . f d d d d f f f 1 1 f f . . 
-            . . d d d d d f f f 1 1 e f . . 
-            . f d d d d f f f f f e e f f . 
-            . f d d d f f f b b b b e f f . 
-            . f f d d f f b b b b b f f f . 
-            . f 2 d d f f b b b b b f f f . 
-            . . f f d d f b b b b b f f . . 
-            . . f f f d f f b b b f f f . . 
-            . . . f f f f f f f f f f . . . 
-            . . . . f f f f f f f f . . . . 
-            . . . . . . f f f f . . . . . . 
+            . . . . . . . . . . . 4 d 4 4 2 
+            . . . . . . c c c c d d 4 d 2 4 
+            . . . . c c c f f c c c 4 4 2 2 
+            . . . a a a a c c c c c c 2 4 2 
+            . . f a a a a b b b 1 1 c c 5 5 
+            . . a a e e a b b b 1 1 f c . 5 
+            . f a e a a b b b b b f f c c . 
+            . f a a a b b b c c c c f c c . 
+            . f f a a b b c c e c c c c c . 
+            . f b a a b b c e e c c c c c . 
+            . . b b a a b c c c e c b c . . 
+            . . c b b a b b c c c b c c . . 
+            . . . c b b b b b b b b c . . . 
+            . . . . c c b b b b c c . . . . 
+            . . . . . . c c c c . . . . . . 
             . . . . . . . . . . . . . . . . 
             `, SpriteKind.weapon)
         tiles.placeOnTile(exploding_bomb, tiles.getTileLocation(1, 11))
         exploding_bomb.setPosition(ronen.x, ronen.y)
         timer.after(3000, function () {
             sprites.create(img`
-                . . . . . . . . . . . . 2 2 4 . 
-                . . . . . . f f f f c c c 5 4 2 
-                . . . . f f f e e c f f 2 4 2 . 
-                . . . d d d d f f f f f f 2 . . 
-                . . f d d d d f f f 1 1 f f . . 
-                . . d d d d d f f f 1 1 e f . . 
-                . f d d d d f f f f f e e f f . 
-                . f d d d f f f b b b b e f f . 
-                . f f d d f f b b b b b f f f . 
-                . f 2 d d f f b b b b b f f f . 
-                . . f f d d f b b b b b f f . . 
-                . . f f f d f f b b b f f f . . 
-                . . . f f f f f f f f f f . . . 
-                . . . . f f f f f f f f . . . . 
-                . . . . . . f f f f . . . . . . 
+                . . . . . . . . . . . 4 d . 4 . 
+                . . . . . . c c c c d d 4 5 2 4 
+                . . . . c c c f f c c c 5 4 5 2 
+                . . . a a a a c c c c c c 2 4 2 
+                . . f a a a a b b b 1 1 c c 5 5 
+                . . a a e e a b b b 1 1 f c . 4 
+                . f a e a a b b b b b f f c c . 
+                . f a a a b b b c c c c f c c . 
+                . f f a a b b c c e c c c c c . 
+                . f b a a b b c e e c c c c c . 
+                . . b b a a b c c c e c b c . . 
+                . . c b b a b b c c c b c c . . 
+                . . . c b b b b b b b b c . . . 
+                . . . . c c b b b b c c . . . . 
+                . . . . . . c c c c . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 `, SpriteKind.weapon).x += 0
             music.bigCrash.play()
@@ -231,17 +231,17 @@ ronen = sprites.create(img`
     . . . . . . . . . . . . 
     . . . . f f f f . . . . 
     . . . f f f f f f f . . 
-    . . f f 4 f f f f f f . 
-    . f f 4 4 4 f f f f f f 
-    f f f 4 4 4 4 f f f f f 
-    f 4 f 4 4 4 4 4 4 f 4 f 
-    f 4 4 1 f 4 4 f 1 4 4 f 
-    . f 4 4 4 4 4 4 4 4 f . 
-    . . f 4 4 2 2 4 4 f . . 
-    . b b b 4 4 4 4 b b b . 
-    b 4 b b 1 1 1 1 b b 4 b 
-    4 d b 1 1 1 1 1 1 b d 4 
-    4 4 b 8 8 5 5 8 8 b 4 4 
+    . . f f e f f f f f f . 
+    . f f e e e f f f f f f 
+    f f f e e e e f f f f f 
+    f e f e e e e e e f e f 
+    f e e 1 f e e f 1 e e f 
+    . f e e e e e e e e f . 
+    . . f e e 2 2 e e f . . 
+    . b b b e e e e b b b . 
+    b e b b 1 1 1 1 b b e b 
+    e d b 1 1 1 1 1 1 b d e 
+    e e b 8 8 5 5 8 8 b e e 
     . . . f f f f f f . . . 
     . . . f f . . f f . . . 
     `, SpriteKind.Player)
