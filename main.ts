@@ -110,6 +110,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 })
 function explode_bomb () {
     if (bomb_bag == 1) {
+        bomb_bag = 0
         exploding_bomb = sprites.create(img`
             . . . . . . . . . . . . 2 2 4 . 
             . . . . . . f f f f c c c 5 4 2 
@@ -127,28 +128,10 @@ function explode_bomb () {
             . . . . f f f f f f f f . . . . 
             . . . . . . f f f f . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, SpriteKind.weapon)
+            `, SpriteKind.kill)
         tiles.placeOnTile(exploding_bomb, tiles.getTileLocation(1, 11))
         exploding_bomb.setPosition(ronen.x, ronen.y)
         timer.after(3000, function () {
-            sprites.create(img`
-                . . . . . . . . . . . . 2 2 4 . 
-                . . . . . . f f f f c c c 5 4 2 
-                . . . . f f f e e c f f 2 4 2 . 
-                . . . d d d d f f f f f f 2 . . 
-                . . f d d d d f f f 1 1 f f . . 
-                . . d d d d d f f f 1 1 e f . . 
-                . f d d d d f f f f f e e f f . 
-                . f d d d f f f b b b b e f f . 
-                . f f d d f f b b b b b f f f . 
-                . f 2 d d f f b b b b b f f f . 
-                . . f f d d f b b b b b f f . . 
-                . . f f f d f f b b b f f f . . 
-                . . . f f f f f f f f f f . . . 
-                . . . . f f f f f f f f . . . . 
-                . . . . . . f f f f . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                `, SpriteKind.weapon).x += 0
             music.bigCrash.play()
         })
     }
