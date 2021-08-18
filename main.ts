@@ -150,7 +150,7 @@ let cake_2: Sprite = null
 let cake_1: Sprite = null
 let cake_0: Sprite = null
 let ronen: Sprite = null
-info.setScore(7)
+info.setScore(6)
 let trophy = sprites.create(img`
     5 5 5 . . . . . . . . . . 5 5 5 
     5 5 5 5 5 5 . . . . . 5 5 5 5 5 
