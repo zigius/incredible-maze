@@ -133,6 +133,9 @@ function explode_bomb () {
         exploding_bomb.setPosition(ronen.x, ronen.y)
         timer.after(3000, function () {
             music.bigCrash.play()
+            tiles.setWallAt(tiles.getTileLocation(exploding_bomb.y, exploding_bomb.x), false)
+            console.logValue("x", exploding_bomb.x)
+            console.logValue("y", exploding_bomb.x)
         })
     }
 }
