@@ -7,10 +7,7 @@ namespace SpriteKind {
 }
 sprites.onOverlap(SpriteKind.Melech, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
-    music.baDing.play()
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    explode_bomb()
+    music.powerUp.play()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Treasure, function (playersprite, treasureSprite) {
     treasureSprite.destroy()
@@ -110,46 +107,15 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 })
 function explode_bomb () {
     if (bomb_bag == 1) {
-        exploding_bomb = sprites.create(img`
-            . . . . . . . . . . . 4 d 4 4 2 
-            . . . . . . c c c c d d 4 d 2 4 
-            . . . . c c c f f c c c 4 4 2 2 
-            . . . a a a a c c c c c c 2 4 2 
-            . . f a a a a b b b 1 1 c c 5 5 
-            . . a a e e a b b b 1 1 f c . 5 
-            . f a e a a b b b b b f f c c . 
-            . f a a a b b b c c c c f c c . 
-            . f f a a b b c c e c c c c c . 
-            . f b a a b b c e e c c c c c . 
-            . . b b a a b c c c e c b c . . 
-            . . c b b a b b c c c b c c . . 
-            . . . c b b b b b b b b c . . . 
-            . . . . c c b b b b c c . . . . 
-            . . . . . . c c c c . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `, SpriteKind.weapon)
+        bomb_bag = 0
+        exploding_bomb = sprites.create(assets.image`exploding_bomb`, SpriteKind.kill)
         tiles.placeOnTile(exploding_bomb, tiles.getTileLocation(1, 11))
         exploding_bomb.setPosition(ronen.x, ronen.y)
         timer.after(3000, function () {
-            sprites.create(img`
-                . . . . . . . . . . . 4 d . 4 . 
-                . . . . . . c c c c d d 4 5 2 4 
-                . . . . c c c f f c c c 5 4 5 2 
-                . . . a a a a c c c c c c 2 4 2 
-                . . f a a a a b b b 1 1 c c 5 5 
-                . . a a e e a b b b 1 1 f c . 4 
-                . f a e a a b b b b b f f c c . 
-                . f a a a b b b c c c c f c c . 
-                . f f a a b b c c e c c c c c . 
-                . f b a a b b c e e c c c c c . 
-                . . b b a a b c c c e c b c . . 
-                . . c b b a b b c c c b c c . . 
-                . . . c b b b b b b b b c . . . 
-                . . . . c c b b b b c c . . . . 
-                . . . . . . c c c c . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                `, SpriteKind.weapon).x += 0
+            console.logValue("x", exploding_bomb.x)
+            console.logValue("y", exploding_bomb.y)
             music.bigCrash.play()
+            tiles.setWallAt(tiles.getTileLocation(0, 0), false)
         })
     }
 }
@@ -158,7 +124,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.weapon, function (sprite, otherS
     butb.destroy()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Melech, function (playersprite, melechSprite) {
-    melechSprite.follow(playersprite, 60)
+    melechSprite.follow(playersprite, 70)
 })
 let exploding_bomb: Sprite = null
 let bomb_bag = 0
@@ -186,7 +152,7 @@ let trophy = sprites.create(img`
     e e e e e e e e e e e e e e e e 
     f e e e e e e e e e e e e e e f 
     `, SpriteKind.Win)
-tiles.setTilemap(tilemap`level1`)
+tiles.setTilemap(tilemap`level2`)
 tiles.placeOnTile(trophy, tiles.getTileLocation(22, 22))
 setCakes()
 bbbuuutttbbb()
